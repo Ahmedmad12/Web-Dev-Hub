@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Dev Helper — Glass UI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="blob b1"></div>
+<div class="blob b2"></div>
+
+<header>
+    <h1>Web Dev Helper</h1>
+    <h2>Glassmorphism Developer Tools</h2>
+</header>
+
+<div class="container">
+    <div class="tools-grid">
+
+        <!-- JSON Formatter -->
+        <div class="tool">
+            <h3>JSON Formatter</h3>
+            <textarea id="jsonInput" placeholder="Paste your JSON here"></textarea>
+            <button onclick="formatJSON()">Format JSON</button>
+        </div>
+
+        <!-- HTML Minifier -->
+        <div class="tool">
+            <h3>HTML Minifier</h3>
+            <textarea id="htmlInput" placeholder="Paste your HTML here"></textarea>
+            <button onclick="minifyHTML()">Minify HTML</button>
+        </div>
+
+        <!-- Base64 Tool -->
+        <div class="tool">
+            <h3>Base64 Encoder</h3>
+            <textarea id="baseInput" placeholder="Enter text here"></textarea>
+            <button onclick="encodeBase64()">Encode</button>
+        </div>
+
+        <!-- Color Generator -->
+        <div class="tool">
+            <h3>Random Color Generator</h3>
+            <div id="colorBox" class="color-box"></div>
+            <input id="colorCode" placeholder="Color Code" readonly />
+            <button onclick="generateColor()">Generate Color</button>
+            <div id="copyMessage" class="copy-msg">✔ Copied!</div>
+        </div>
+
+        <!-- HEX ↔ RGB ↔ HSL Converter -->
+        <div class="tool">
+            <h3>Hex ↔ RGB ↔ HSL Converter</h3>
+            <input id="colorInput" placeholder="#HEX or rgb() or hsl()">
+            <button onclick="convertColor()">Convert</button>
+            <input id="colorOutput" placeholder="Result" readonly>
+        </div>
+
+        <!-- Gradient Generator -->
+        <div class="tool">
+            <h3>Gradient Generator</h3>
+            <input id="grad1" placeholder="Color 1 (#HEX)">
+            <input id="grad2" placeholder="Color 2 (#HEX)">
+            <div id="gradBox" class="color-box"></div>
+            <button onclick="generateGradient()">Generate Gradient</button>
+        </div>
+
+        <!-- CSS Minifier -->
+        <div class="tool">
+            <h3>CSS Minifier</h3>
+            <textarea id="cssInput" placeholder="Paste CSS here"></textarea>
+            <button onclick="minifyCSS()">Minify CSS</button>
+        </div>
+
+        <!-- JS Minifier -->
+        <div class="tool">
+            <h3>JS Minifier</h3>
+            <textarea id="jsInput" placeholder="Paste JS here"></textarea>
+            <button onclick="minifyJS()">Minify JS</button>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    &copy; 2025 Web Dev Helper — All rights reserved | Developer: Ahmed Al-Madhoun
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
